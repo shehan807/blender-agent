@@ -49,7 +49,7 @@ def main():
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("script", nargs="?", help="Path to Python script file")
     group.add_argument("-c", "--code", help="Code string to execute")
-    parser.add_argument("--timeout", type=int, default=170, help="Socket timeout in seconds")
+    parser.add_argument("--timeout", type=int, default=300, help="Socket timeout in seconds")
     args = parser.parse_args()
 
     if args.code:
